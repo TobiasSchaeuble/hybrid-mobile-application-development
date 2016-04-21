@@ -1,44 +1,40 @@
-# Ionic 2 Conference Application
+# hybrid mobile application development
 
 This is purely a demo of Ionic v2.0 and is still in development.
 
+forked from [driftyco/ionic-conference-app](https://github.com/driftyco/ionic-conference-app) on 20.04.2106
 
-## Important!
-**There is not an actual Ionic Conference at this time.** This project is just to show off Ionic v2.0 components in a real-world application.
-Please go through the steps in [CONTRIBUTING.md](https://github.com/driftyco/ionic-conference-app/blob/master/CONTRIBUTING.md) before submitting an issue.
 
 
 ## Table of Contents
- - [Getting Started](#getting-started)
- - [Contributing](#contributing)
- - [App Preview](#app-preview)
-  - [iPhone 6](#iphone-6)
-  - [Nexus 5](#nexus-5)
- - [Use Cases](#use-cases)
- - [File Structure of App](#file-structure-of-app)
+
+- [Getting Started](#getting-started)
+- [Contributing](#contributing)
+- [App Preview](#app-preview)
+- [iPhone 6](#iphone-6)
+- [Nexus 5](#nexus-5)
+- [Use Cases](#use-cases)
+- [File Structure of App](#file-structure-of-app)
 
 
 ## Getting Started
 
 * Clone this repository.
-* Want to use TypeScript? Check out the `typescript` branch: `git checkout typescript` 
+* Want to use TypeScript? Check out the typescript  branch: `git checkout typescript` 
 * Run `npm install` from the project root.
 * Install the ionic CLI (`npm install -g ionic@beta`)
-* Run `ionic serve` in a terminal from the project root.
-* Profit
+* Run `ionic serve -l` from the project root.
+* Run `ionic platform add android` or `ionic platform add ios` from the project root in to add platforms.
+* Run `ionic run —device android` or `ionic run —device ios` from the project root to build and than run on physical connected device.
 
 **Note:** Build slow? Update to `npm3`: `npm install -g npm`.
 
 
 
-## Contributing
-See [CONTRIBUTING.md](https://github.com/driftyco/ionic-conference-app/blob/master/CONTRIBUTING.md) :tada::+1:
-
 
 ## Use Cases
 
-* Menu - [ [template](https://github.com/driftyco/ionic-conference-app/blob/master/app/app.html#L3-L21) |
-[code](https://github.com/driftyco/ionic-conference-app/blob/master/app/app.js#L27-L32) ]
+* Menu - [ [template](https://github.com/driftyco/ionic-conference-app/blob/master/app/app.html#L3-L21) |[code](https://github.com/driftyco/ionic-conference-app/blob/master/app/app.js#L27-L32) ]
 * Tabs - [ [template](https://github.com/driftyco/ionic-conference-app/blob/master/app/pages/tabs/tabs.html) | [code](https://github.com/driftyco/ionic-conference-app/blob/master/app/pages/tabs/tabs.js) ]
 * Segments - [ [template](https://github.com/driftyco/ionic-conference-app/blob/master/app/pages/schedule/schedule.html#L6-L13) | [code](https://github.com/driftyco/ionic-conference-app/blob/master/app/pages/schedule/schedule.js#L24) ]
 * Search bar - [ [template](https://github.com/driftyco/ionic-conference-app/blob/master/app/pages/schedule/schedule.html#L24-L29) | [code](https://github.com/driftyco/ionic-conference-app/blob/master/app/pages/schedule/schedule.js#L36-L41) ]
@@ -47,39 +43,14 @@ See [CONTRIBUTING.md](https://github.com/driftyco/ionic-conference-app/blob/mast
 * Action Sheet - [ [template](https://github.com/driftyco/ionic-conference-app/blob/master/app/pages/speaker-list/speaker-list.html#L32) | [code](https://github.com/driftyco/ionic-conference-app/blob/master/app/pages/speaker-list/speaker-list.js#L34-L55) ]
 * Toggle / switches - [ [template](https://github.com/driftyco/ionic-conference-app/blob/master/app/pages/schedule-filter/schedule-filter.html#L22-L25) ]
 * Slides - [ [template](https://github.com/driftyco/ionic-conference-app/blob/master/app/pages/tutorial/tutorial.html#L2-L14) |
-[code](https://github.com/driftyco/ionic-conference-app/blob/master/app/pages/tutorial/tutorial.js#L14-L39) ]
+  [code](https://github.com/driftyco/ionic-conference-app/blob/master/app/pages/tutorial/tutorial.js#L14-L39) ]
 * Cards - [ [template](https://github.com/driftyco/ionic-conference-app/blob/master/app/pages/speaker-list/speaker-list.html#L9-L42) ]
 * Sticky headers - [ [template](https://github.com/driftyco/ionic-conference-app/blob/master/app/pages/schedule/schedule.html#L34-L36) ]
 * Grid - [ [template](https://github.com/driftyco/ionic-conference-app/blob/master/app/pages/login/login.html#L26-L33) ]
 * Using Angular HTTP for JSON - [ [code](https://github.com/driftyco/ionic-conference-app/blob/master/app/providers/conference-data.js#L25-L30) | [usage](https://github.com/driftyco/ionic-conference-app/blob/master/app/pages/schedule/schedule.js#L36-L41) ]
 
 
-## App Preview
 
-### iPhone 6
-
-<!-- GIF of iOS app -->
-<img src="resources/gifs/ios.gif" alt="iOS"><br>
-<!-- images of iOS app -->
-<img src="resources/screenshots/iphone/1.png" alt="Sessions" width="425">
-<img src="resources/screenshots/iphone/2.png" alt="Filter Sessions" width="425">
-<img src="resources/screenshots/iphone/3.png" alt="Speakers" width="425">
-<img src="resources/screenshots/iphone/4.png" alt="Speaker Detail" width="425">
-<img src="resources/screenshots/iphone/5.png" alt="Map" width="425">
-<img src="resources/screenshots/iphone/6.png" alt="About" width="425">
-
-
-### Nexus 5
-
-<!-- GIF of MD app -->
-<img src="resources/gifs/nexus.gif" alt="MD"><br>
-<!-- GIF of MD app -->
-<img src="resources/screenshots/nexus/1.png" alt="Sessions" width="425">
-<img src="resources/screenshots/nexus/2.png" alt="Filter Sessions" width="425">
-<img src="resources/screenshots/nexus/3.png" alt="Speakers" width="425">
-<img src="resources/screenshots/nexus/4.png" alt="Speaker Detail" width="425">
-<img src="resources/screenshots/nexus/5.png" alt="Map" width="425">
-<img src="resources/screenshots/nexus/6.png" alt="About" width="425">
 
 
 ## File Structure of App
