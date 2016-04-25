@@ -51,7 +51,7 @@ export class TutorialPage {
 
   updateUsername(event) {
     this.username = event.target.value;
-    this.slides[0].title = "Welcome "+ this.username
+    this.slides[0].title = "Welcome "+ this.username;
   }
 
 }
