@@ -6,47 +6,31 @@
     "type": "git",
     "url": "https://github.com/driftyco/ionic-conference-app.git"
   },
-  "scripts": {
-    "ionic:build": "ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve"
-  },
   "dependencies": {
-    "@angular/common": "2.2.1",
-    "@angular/compiler": "2.2.1",
-    "@angular/compiler-cli": "2.2.1",
-    "@angular/core": "2.2.1",
-    "@angular/forms": "2.2.1",
-    "@angular/http": "2.2.1",
-    "@angular/platform-browser": "2.2.1",
-    "@angular/platform-browser-dynamic": "2.2.1",
-    "@angular/platform-server": "2.2.1",
-    "@ionic/storage": "1.1.6",
-    "ionic-angular": "2.0.0-rc.3-201611211919",
-    "ionic-native": "2.2.3",
+    "angular2": "2.0.0-beta.15",
+    "es6-shim": "^0.35.0",
+    "ionic-angular": "2.0.0-beta.6",
+    "ionic-native": "^1.1.0",
     "ionicons": "3.0.0",
-    "moment": "2.15.1",
-    "rxjs": "5.0.0-beta.12",
-    "zone.js": "0.6.26"
+    "rxjs": "5.0.0-beta.2"
   },
   "devDependencies": {
-    "@ionic/app-scripts": "0.0.44",
-    "typescript": "2.0.9",
-    "webpack-bundle-analyzer": "^1.5.3"
-  },
-  "config": {
-    "ionic_bundler": "webpack"
+    "del": "2.2.0",
+    "gulp": "3.9.1",
+    "gulp-watch": "4.3.5",
+    "ionic-gulp-browserify-es2015": "^1.0.2",
+    "ionic-gulp-fonts-copy": "^1.0.0",
+    "ionic-gulp-html-copy": "^1.0.0",
+    "ionic-gulp-sass-build": "^1.0.0",
+    "ionic-gulp-scripts-copy": "^1.0.1",
+    "run-sequence": "1.1.5"
   },
   "cordovaPlugins": [
     "cordova-plugin-whitelist",
     {
       "locator": "https://github.com/VersoSolutions/CordovaClipboard",
       "id": "com.verso.cordova.clipboard"
-    },
-    {
-      "locator": "https://github.com/apache/cordova-plugin-splashscreen.git",
-      "id": "cordova-plugin-splashscreen"
-    },
-    "cordova-plugin-crosswalk-webview"
+    }
   ],
   "cordovaPlatforms": [
     "ios",
