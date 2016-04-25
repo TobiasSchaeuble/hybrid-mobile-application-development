@@ -15,7 +15,6 @@ export class TutorialPage {
     this.nav = nav;
     this.menu = menu;
     this.showSkip = true;
-    this.username = '';
     this.slides = [
       {
         title: "Welcome Developer",
@@ -47,11 +46,6 @@ export class TutorialPage {
   onPageDidLeave() {
     // enable the left menu when leaving the tutorial page
     this.menu.enable(true);
-  }
-
-  updateUsername(event) {
-    this.username = event.target.value;
-    this.slides[0].title = "Welcome "+ this.username
   }
 
 }
