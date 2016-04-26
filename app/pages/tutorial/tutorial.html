@@ -3,15 +3,13 @@
     <button (click)="startApp()" primary>Skip</button>
   </ion-buttons>
 </ion-navbar>
-
-<ion-item>
-  <ion-label floating>Username</ion-label>
-  <ion-input type="text" name="Developer Name" [(ngmodel)]="username" (input)="updateUsername($event)" ></ion-input> 
-</ion-item>
-
 <ion-content>
   <ion-slides pager (slideChangeStart)="onSlideChangeStart($event)">
     <ion-slide *ngFor="#slide of slides">
+      <ion-item>
+        <ion-label floating [innerHTML]="slide.input"></ion-label>
+        <ion-input type="text" [(ngmodel)]="username" (input)="updateInput($event, slide)" ></ion-input> 
+      </ion-item>
       <img [src]="slide.image" class="slide-image"/>
       <h2 class="slide-title" [innerHTML]="slide.title"></h2>
       <p [innerHTML]="slide.description"></p>

@@ -15,17 +15,22 @@ export class TutorialPage {
     this.nav = nav;
     this.menu = menu;
     this.showSkip = true;
-    this.username = '';
+    this.username ='';
+    this.interests ='';
     this.slides = [
       {
+        index: "Username",
         title: "Welcome Developer",
         description: "The <b>hybrid mobile application development App</b> is a practical preview of the Ionic Framework in action, and a demonstration of proper code use.",
         image: "img/ica-slidebox-img-1.png",
+        input: "Username"
       },
       {
+        index: "Interests",
         title: "What is Ionic?",
         description: "<b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.",
         image: "img/ica-slidebox-img-2.png",
+        input: "Interests"
       }
     ];
     
@@ -49,9 +54,14 @@ export class TutorialPage {
     this.menu.enable(true);
   }
 
-  updateUsername(event) {
-    this.username = event.target.value;
-    this.slides[0].title = "Welcome "+ this.username;
+  updateInput(event, slide) {
+    if (slide.index == "Username"){
+      this.username = event.target.value;
+      slide.title = "Welcome "+ this.username;
+    }
+    if (slide.index == "Interests"){
+      this.interests = event.target.value;
+    }
   }
 
 }
