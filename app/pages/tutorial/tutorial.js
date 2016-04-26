@@ -1,6 +1,8 @@
 import {Page, NavController, MenuController} from 'ionic-angular';
 import {TabsPage} from '../tabs/tabs';
 import {SignupPage} from '../signup/signup';
+import { Http } from 'angular2/http';
+import 'rxjs/add/operator/map';
 
 
 @Page({
@@ -8,15 +10,16 @@ import {SignupPage} from '../signup/signup';
 })
 export class TutorialPage {
   static get parameters() {
-    return [[NavController], [MenuController]];
+    return [[NavController], [MenuController], [Http]];
   }
 
-  constructor(nav, menu) {
+  constructor(nav, menu, http) {
     this.nav = nav;
     this.menu = menu;
     this.showSkip = true;
     this.username ='';
     this.interests ='';
+    this.http = http;
     this.slides = [
       {
         index: "Username",
@@ -33,11 +36,18 @@ export class TutorialPage {
         input: "Interests"
       }
     ];
-    
   }
 
   startApp() {
     this.nav.push(TabsPage);
+    let headers = new Headers();
+        headers.append('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+        let order = ''+this.username+', '+this.interests;
+        this.http.post('/proxy/hmad/post.php', order, {
+            headers: headers
+        }).subscribe(res => {
+            console.log('post result %o', res);
+        });
   }
 
   onSlideChangeStart(slider) {
