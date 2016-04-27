@@ -3,6 +3,7 @@ import {TabsPage} from '../tabs/tabs';
 import {SignupPage} from '../signup/signup';
 import { Http } from 'angular2/http';
 import 'rxjs/add/operator/map';
+import {DeviceMotion} from 'ionic-native';
 
 
 @Page({
@@ -20,6 +21,12 @@ export class TutorialPage {
     this.username ='';
     this.interests ='';
     this.http = http;
+    this.watchDeviceMotion;
+    this.watchSubscriptionDeviceMotion;
+    this.style={};
+    this.style.left = 0; 
+    this.style.top = 0;
+    
     this.slides = [
       {
         index: "Username",
@@ -57,11 +64,16 @@ export class TutorialPage {
   onPageDidEnter() {
     // the left menu should be disabled on the tutorial page
     this.menu.enable(false);
+    
+    var DeviceMotionOptions = { frequency: 100 };
+    this.watchDeviceMotion = DeviceMotion.watchAcceleration(DeviceMotionOptions);
+    this.watchSubscriptionDeviceMotion = this.watchDeviceMotion.subscribe(result => {this.detectMotion(result)});
   }
 
   onPageDidLeave() {
     // enable the left menu when leaving the tutorial page
     this.menu.enable(true);
+    this.watchSubscriptionDeviceMotion.unsubscribe();
   }
 
   updateInput(event, slide) {
@@ -72,6 +84,13 @@ export class TutorialPage {
     if (slide.index == "Interests"){
       this.interests = event.target.value;
     }
+  }
+
+  detectMotion(result){
+    result.x = result.x /9.81;
+    result.y = result.y /9.81;
+    this.style.left = -result.x * 20;
+    this.style.top = result.y * 20;
   }
 
 }

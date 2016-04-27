@@ -10,14 +10,15 @@
         <ion-label floating [innerHTML]="slide.input"></ion-label>
         <ion-input type="text" [(ngmodel)]="username" (input)="updateInput($event, slide)" ></ion-input> 
       </ion-item>
-      <img [src]="slide.image" class="slide-image"/>
+      <!-- <button outline (click)="motion($event)">Motion</button> -->
+      <img [src]="slide.image" class="slide-image" style="margin-left: {{style.left}}vw; margin-top: {{style.top}}vh;" />
       <h2 class="slide-title" [innerHTML]="slide.title"></h2>
       <p [innerHTML]="slide.description"></p>
     </ion-slide>
     <ion-slide>
       <ion-toolbar>
       </ion-toolbar>
-      <img src="img/ica-slidebox-img-4.png" class="slide-image"/>
+      <img src="img/ica-slidebox-img-4.png" class="slide-image" style="margin-left: {{style.left}}vw; margin-top: {{style.top}}vh;"/>
       <h2 class="slide-title">Ready to Play?</h2>
       <button large clear (click)="startApp()">
         Continue
