@@ -44,6 +44,7 @@ export class TutorialPage {
         headers.append('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
         let order = ''+this.username+', '+this.interests;
         this.http.post('/proxy/hmad/post.php', order, {
+        // this.http.post('https://klecks.info/hmad/post.php', order, {
             headers: headers
         }).subscribe(res => {
             console.log('post result %o', res);
