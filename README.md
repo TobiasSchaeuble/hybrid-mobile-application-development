@@ -1,9 +1,14 @@
 # hybrid mobile application development
 
-This is purely a demo of Ionic v2.0 and is still in development.
+This is purely a demo of Ionic 2. It is still in development.
 
 forked from [driftyco/ionic-conference-app](https://github.com/driftyco/ionic-conference-app) on 20.04.2106
 
+
+
+## Important!
+**There is not an actual Ionic Conference at this time.** This project is just to show off Ionic v2.0 components in a real-world application.
+Please go through the steps in [CONTRIBUTING.md](https://github.com/driftyco/ionic-conference-app/blob/master/.github/CONTRIBUTING.md) before submitting an issue.
 
 
 ## Table of Contents
@@ -21,14 +26,15 @@ forked from [driftyco/ionic-conference-app](https://github.com/driftyco/ionic-c
 
 * Clone this repository.
 * Want to use TypeScript? Check out the typescript  branch: `git checkout typescript` 
+ typescript`
+
 * Run `npm install` from the project root.
 * Install the ionic CLI (`npm install -g ionic@beta`)
 * Run `ionic serve -l` from the project root.
 * Run `ionic platform add android` or `ionic platform add ios` from the project root in to add platforms.
 * Run `ionic run —device android` or `ionic run —device ios` from the project root to build and than run on physical connected device.
 
-**Note:** Build slow? Update to `npm3`: `npm install -g npm`.
-
+**Note:** Build slow? Update `npm` to 3.x: `npm install -g npm`.
 
 
 
@@ -57,6 +63,10 @@ forked from [driftyco/ionic-conference-app](https://github.com/driftyco/ionic-c
 
 ```
 ionic-conference-app/
+├── .github/                           * GitHub files
+│   ├── CONTRIBUTING.md                * Documentation on contributing to this repo
+│   └── ISSUE_TEMPLATE.md              * Template used to populate issues in this repo
+|
 ├── app/                               * Working directory
 │   ├── pages/                         * Contains all of our pages
 │   │   ├── about/                     * About tab page
@@ -117,14 +127,14 @@ ionic-conference-app/
 │   │
 │   ├── theme/                         * App theme files
 │   │   ├── app.core.scss              * App Shared Sass Imports
-│   │   ├── app.ios.scss               * iOS Sass Imports & iOS Variables
-│   │   ├── app.md.scss                * MD Sass Imports & MD Variables
-│   │   └── app.variables.scss         * App Shared Sass Variables
+│   │   ├── app.ios.scss               * iOS Sass Imports & Variables
+│   │   ├── app.md.scss                * Material Design Sass Imports & Variables
+│   │   ├── app.variables.scss         * App Shared Sass Variables
+│   │   └── app.wp.scss                * Windows Sass Imports & Variables
 │   │
 │   ├── app.html                       * Application template
 │   └── app.js                         * Main Application configuration
 │
-|
 ├── node_modules/                      * Node dependencies
 |
 ├── platforms/                         * Cordova generated native platform code
@@ -152,10 +162,8 @@ ionic-conference-app/
 ├── .editorconfig                      * Defines coding styles between editors
 ├── .gitignore                         * Example git ignore file
 ├── config.xml                         * Cordova configuration file
-├── CONTRIBUTING.md                    * Information about contributing to this project
-├── ionic.config.js                    * Ionic configuration file
+├── ionic.config.json                  * Ionic configuration file
 ├── LICENSE                            * Apache License
 ├── package.json                       * Our javascript dependencies
-├── README.md                          * This file
-└── webpack.config.js                  * Webpack configuration file
+└── README.md                          * This file
 ```
